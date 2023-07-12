@@ -7,7 +7,7 @@ fn main() {
           println!("ping -c 1 -i 0.2 {q}.{w}.{e}.{r}");
           println!("if [ $? -eq 0 ]");
           println!("then");
-          println!("touch ips/{q}.{w}.{e}.{r}");
+          println!("echo -e {q}.{w}.{e}.{r}\n | tee -a ips");
           println!("fi");
         }
       }
